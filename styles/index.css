@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lobster&family=Noto+Sans+TC:wght@300;400&family=Fira+Code&display=swap');
+
+/* Ruby Taiwan palette (from rubytw _sass/base/_styleguide.sass) */
+:root {
+  --rt-red: #bd3f32;
+  --rt-blue: #2a687e;
+  --rt-purple: #673e6d;
+  --rt-yellow: #fff59d;
+  --rt-deep: #323232;
+  --rt-grey: #9b9b9b;
+  --rt-light: #f5f5f5;
+}
+
+.slidev-layout {
+  font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+  color: var(--rt-deep);
+  background: #fff;
+  padding: 3rem 4.5rem;
+}
+.slidev-layout h1 { font-weight: 700; color: var(--rt-red); font-size: 2.2rem; margin-bottom: 1.2rem; }
+.slidev-layout h2 { font-weight: 600; color: var(--rt-deep); }
+
+.red { color: var(--rt-red); font-weight: 600; }
+.mark { background: var(--rt-yellow); padding: 0 .25em; }
+.muted { color: var(--rt-grey); }
+.lobster { font-family: 'Lobster', cursive; font-weight: 400; }
+
+/* Red Ruby Taiwan section (cover / closing) */
+.rt-red-bg {
+  position: absolute; inset: 0;
+  background: var(--rt-red) url('/geometric_background.svg') center / cover;
+  color: #fff; overflow: hidden;
+}
+
+/* Pipeline boxes */
+.pipe { display: flex; align-items: center; gap: .6rem; margin: 1rem 0; }
+.pipe .step { border: 2px solid var(--rt-red); border-radius: 10px; padding: .6rem .9rem; font-weight: 600; text-align: center; min-width: 6.5rem; white-space: nowrap; }
+.pipe .step small { display: block; font-weight: 400; color: var(--rt-grey); font-size: .7rem; }
+.pipe .step.hot { background: var(--rt-red); color: #fff; }
+.pipe .step.hot small { color: #fdd; }
+.pipe .arrow { color: var(--rt-red); font-size: 1.4rem; }
+
+/* Big numbers */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; }
+.stat { background: var(--rt-light); border-top: 5px solid var(--rt-red); border-radius: 6px; padding: 1.2rem .8rem; text-align: center; }
+.stat b { display: block; font-size: 2.2rem; color: var(--rt-red); }
+.stat span { font-size: .85rem; color: #555; }
+
+table { font-size: .85rem; }
+th { color: var(--rt-red); }
+.slidev-code { font-size: 1.05rem !important; }
+.slidev-layout.default { display: flex; flex-direction: column; justify-content: center; }
+.tight-list li { margin: .35rem 0; } .tight-list li p { margin: 0; }
+
+/* Goto dialog (press g): hide the slide-title suggestion list so the audience never sees it.
+   Typing a page number + Enter still jumps — Goto.vue picks the target from its data, not the DOM. */
+#slidev-goto-dialog .autocomplete-list { display: none !important; }
+
+/* p8: inside sp_poly_mul */
+.polymul .pm-title { font-weight: 600; font-size: .95rem; margin-bottom: .3rem; }
+.polymul .pm-title small { font-weight: 400; color: var(--rt-grey); font-size: .7rem; margin-left: .3rem; }
+.polymul .slidev-code { font-size: .68rem !important; line-height: 1.35 !important; margin: 0 0 .5rem !important; }
+.pm-table { font-size: .72rem; width: 100%; }
+.pm-table th, .pm-table td { padding: .18rem .45rem; }
+.pm-table th { font-size: .66rem; text-transform: uppercase; letter-spacing: .05em; }
+.pm-table code { font-size: .7rem; }
+.pm-table tr.hit td { background: var(--rt-yellow); font-weight: 600; }
+
+/* p3: pipeline with equivalent code per step */
+.pipe.flow3 { display: grid; grid-template-columns: 1fr auto 1fr auto 1.25fr; align-items: start; gap: .5rem; margin: .6rem 0 0; }
+.flow3 .col { display: flex; flex-direction: column; gap: .5rem; min-width: 0; }
+.flow3 .arrow { margin-top: .9rem; }
+.flow3 .card .slidev-code { font-size: .66rem !important; line-height: 1.45 !important; margin: 0 !important; }
+.flow3 .cap { font-size: .68rem; color: #666; margin: 0 0 .25rem; }
+.flow3 .cap code { font-size: .66rem; }
