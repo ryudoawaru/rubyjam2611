@@ -5,12 +5,195 @@ title: "What's Spinel? — Ruby Jam Nov 2026"
 author: Ruby Taiwan
 aspectRatio: 16/9
 canvasWidth: 980
-duration: 11min
+duration: 13min
 transition: fade
 drawings:
   enabled: false
 fonts:
   provider: none
+layout: cover
+class: p-0
+---
+
+<div class="rt-red-bg flex flex-col items-center justify-center text-center gap-4">
+  <img src="/ruby_taiwan_logo.svg" class="w-28" />
+  <h1 class="lobster !text-white !text-8xl !font-normal !m-0">Ruby Jam</h1>
+  <p class="text-3xl font-bold !m-0 !opacity-100">Nov 24, 2026</p>
+  <p class="text-xl opacity-90">Ruby Taiwan monthly meetup</p>
+  <img src="/ruby_taiwan_logotype.svg" class="w-56 mt-6" style="filter: brightness(0) invert(1)" />
+</div>
+
+<!--
+[0:00–0:20]
+大家好，歡迎來到 11 月的 Ruby Jam！
+開始之前，先跟大家講一下今晚的流程、贊助商，還有幾個近期的活動。
+-->
+
+---
+
+# Tonight
+
+| Time | Session |
+|---|---|
+| 19:30 | **Hello, Spinel: The New Ruby AOT Compiler!** — Aotokitsuruya |
+| 20:10 | **Rails Beginner, Big Adventure! My First Kaigi on Rails!** — Vevila |
+| 20:50 | **Open Discussion** — OSS contribution, problem solving, sharing |
+
+<!--
+[0:20–0:40]
+快速看一下今晚流程：
+- 7:30 Aotokitsuruya 講 Spinel，會有 live demo（麥克風 + Whisper 語音轉字幕，打包成單一執行檔）
+- 8:10 Vevila 分享第一次參加 Kaigi on Rails 的心得，Rails 新手一定有共鳴
+- 8:50 開放討論
+-->
+
+---
+
+# Thanks to our sponsors 💎
+
+<div class="stats" style="grid-template-columns: repeat(2, 1fr)">
+  <div class="stat">
+    <div class="flex items-center justify-center gap-4 h-24 mb-3">
+      <img src="/logo_piccollage.png" class="h-24 mix-blend-multiply" />
+      <div class="text-3xl red font-bold">×</div>
+      <img src="/logo_day1.svg" class="h-20 rounded mix-blend-multiply" />
+    </div>
+    <b class="!text-xl">PicCollage × Day1 Coworking Space</b><span class="!text-lg">Venue</span>
+  </div>
+  <div class="stat">
+    <div class="flex items-center justify-center h-24 mb-3"><img src="/logo_5xruby.svg" class="h-20" /></div>
+    <b class="!text-xl">5xRuby</b><span class="!text-lg">Food</span>
+  </div>
+</div>
+
+<!--
+[0:40–0:55]
+感謝今晚的贊助商：
+PicCollage 和 Day1 Coworking Space 提供場地，
+5xRuby 贊助今天的食物，大家吃飽一點！
+-->
+
+---
+
+<div class="flex items-center gap-6">
+  <img src="/rwc_hero.svg" class="h-32" />
+  <div>
+    <h1 class="!mb-1">RubyWorld Conference 2026</h1>
+    <p class="text-xl !m-0">Dec 3–4 (Thu–Fri) · Kunibiki Messe, Matsue, Shimane 🇯🇵</p>
+  </div>
+</div>
+
+<div class="grid grid-cols-2 gap-4 mt-5">
+  <div class="stat flex items-center gap-4 !text-left">
+    <img src="/rwc_irina.jpg" class="w-20 h-20 rounded-full object-cover" />
+    <div><b class="!text-xl">Ruby Startups Today</b><span class="block">Irina Nazarova · CEO, Evil Martians</span><span class="block">Keynote · Day 1</span></div>
+  </div>
+  <div class="stat flex items-center gap-4 !text-left">
+    <img src="/rwc_matz.jpg" class="w-20 h-20 rounded-full object-cover" />
+    <div><b class="!text-xl">Extreme Vibe Coding</b><span class="block">Yukihiro “Matz” Matsumoto</span><span class="block">Keynote · Day 2</span></div>
+  </div>
+</div>
+
+<div class="mt-4"></div>
+
+- **Day 1** also hosts the **Ruby Prize** & **Ruby biz Grand prix** awards →
+- Registration extended to <span class="red font-bold">Nov 30 (Mon)</span> · 2026.rubyworld-conf.org
+
+<!--
+[0:55–1:30]
+順便宣傳一下：下週 12/3–4 就是 RubyWorld Conference 2026，在島根松江的くにびきメッセ。
+兩場 Keynote：第一天是 Evil Martians CEO Irina Nazarova 講「Ruby Startups Today」，
+第二天是 Matz 本人，題目是「エクストリームバイブコーディング」——Extreme Vibe Coding，
+剛好跟今天的 Spinel 有點呼應，Matz 最近怎麼寫程式，可以現場聽他講。
+報名延長到 11/30（一），報完不能取消，有興趣的朋友這週快決定！
+第一天還有兩個頒獎，接下來兩頁各別介紹。
+-->
+
+---
+
+<div class="flex items-end gap-4">
+  <img src="/rwc_ruby_prize.jpg" class="h-20 mix-blend-multiply" />
+  <span class="text-5xl font-bold red mb-2">2026</span>
+</div>
+
+<p class="text-lg mt-2">Honors <b>individuals</b> with notable recent contributions to the Ruby community · winner gets <span class="mark">¥1,000,000</span> from Matsue City · awarded at RWC</p>
+
+<p class="muted !mb-1">Final nominees</p>
+<div class="grid grid-cols-3 gap-3">
+  <div class="stat flex items-center gap-3 !text-left !p-3">
+    <img src="/rb/prize_yudai-takada.jpg" class="w-16 h-16 rounded-full object-cover" />
+    <div><b class="!text-lg">Yudai Takada</b><span class="block">Regional RubyKaigis &amp; local .rb groups</span></div>
+  </div>
+  <div class="stat flex items-center gap-3 !text-left !p-3">
+    <img src="/rb/prize_satoshi-tagomori.jpg" class="w-16 h-16 rounded-full object-cover" />
+    <div><b class="!text-lg">Satoshi Tagomori</b><span class="block">Brought Ruby::Box into Ruby 4.0</span></div>
+  </div>
+  <div class="stat flex items-center gap-3 !text-left !p-3">
+    <img src="/rb/prize_marco-roth.jpg" class="w-16 h-16 rounded-full object-cover" />
+    <div><b class="!text-lg">Marco Roth</b><span class="block">Ruby dev tooling (Herb, …) &amp; RubyEvents.org</span></div>
+  </div>
+</div>
+
+<p class="mt-5">Last year's winner: <b>Stan Lo</b> 🇹🇼 — author of <span class="muted">st0012.dev/spinel</span>, the main source for this talk</p>
+
+<p class="muted text-sm">Source: rubyprize.jp</p>
+
+<!--
+[1:30–1:55]
+第一個是 Ruby Prize，由 Matz 擔任實行委員長，表彰「個人」在近幾年對 Ruby 社群的貢獻，
+得主可以拿到松江市提供的 100 萬日圓獎金，在 RubyWorld 上頒獎。
+今年的最終候選有三位：
+- 高田雄大：辦了很多地域 Ruby 會議和地域 .rb，在関ケ原 RubyKaigi 辦了 RubyKaja
+- 田籠聡（tagomoris）：把 Ruby::Box 帶進 Ruby 4.0
+- Marco Roth：Herb 等 Ruby 開發工具，還有 RubyEvents.org
+特別提一下：去年 2025 的得主是 Stan Lo（羅泓武），
+就是今天這份 Spinel 介紹主要參考的那篇文章作者！
+-->
+
+---
+layout: cover
+class: p-0
+---
+
+<div class="w-full h-full flex items-center justify-center" style="background:#121115">
+  <div class="relative">
+    <img src="/rb/finalist.png" class="block" style="height:551px" />
+    <!-- SOSI card outline, % of the screenshot (measured on the 2x PNG) -->
+    <div class="absolute" style="left:50.75%; top:29.09%; width:21.1%; height:30.38%; outline:4px solid #fff59d; outline-offset:3px"></div>
+    <p class="absolute right-[5%] top-[7%] text-right text-white text-base leading-normal !m-0">
+      Award ceremony <b>Dec 3 (Thu) 17:00</b> · Kunibiki Messe<br>
+      Grand prix ×~2 (<b>¥1M</b>) · Special award ×~3 (<b>¥300k</b>)<br>
+      <span class="opacity-60 text-xs">19 entries · judging chair: Matz · source: rubybiz.jp</span>
+    </p>
+  </div>
+</div>
+
+<!--
+[1:55–2:20]
+第二個是 Ruby biz Grand prix，表彰「用 Ruby 把生意做起來」的企業和服務，評審委員長也是 Matz。
+今年 19 件報名、選出 7 件入圍：レポサク、スクールタクト、SOSI、Teachme Biz、Akerun、リーナー見積、モチベーションクラウド。
+最後會選出約 2 件大賞（各 100 萬日圓）和約 3 件審查員特別賞（各 30 萬日圓），
+12/3 下午五點在くにびきメッセ頒獎，也有線上直播。
+小小業配：5xRuby 的 SOSI 也入圍了 🎉 結果出爐再跟大家分享！
+-->
+
+---
+layout: cover
+class: p-0
+---
+
+<div class="rt-red-bg flex flex-col items-center justify-center text-center gap-4">
+  <p class="lobster text-3xl opacity-90">Next Ruby Jam</p>
+  <h1 class="!text-white !text-6xl !font-bold !m-0">Dec 17, 2026 (Thu)</h1>
+  <p class="text-2xl opacity-80 mt-4">Topics TBA — stay tuned!</p>
+</div>
+
+<!--
+[2:20–2:30]
+下一場 Ruby Jam 是 12/17（四），內容還在規劃中，確定後會在社群公布。
+-->
+
+---
 layout: cover
 class: p-0
 ---
@@ -24,32 +207,11 @@ class: p-0
 </div>
 
 <!--
-[0:00–0:30]
-大家好，歡迎來到本月的 Ruby Jam！
+[2:30–2:50]
+好，回到今晚的主題。
 今晚第一場是 Aotokitsuruya 的 Spinel 深度分享。
 在那之前，我先用 7 分鐘幫大家做個「Spinel 是什麼」的科普，
 特別是剛開始學 Rails 的朋友，聽完後面的演講會比較好跟上。
--->
-
----
-
-# Tonight
-
-| Time | Session |
-|---|---|
-| 19:30 | **Hello, Spinel: The New Ruby AOT Compiler!** — Aotokitsuruya |
-| 20:10 | **Rails Beginner, Big Adventure! My First Kaigi on Rails!** — Vevila |
-| 20:50 | **Open Discussion** — OSS contribution, problem solving, sharing |
-
-<p class="muted mt-8">Thanks to our sponsors <b>PicCollage</b> & <b>5xRuby</b> 💎</p>
-
-<!--
-[0:30–0:50]
-快速看一下今晚流程：
-- 7:30 Aotokitsuruya 講 Spinel，會有 live demo（麥克風 + Whisper 語音轉字幕，打包成單一執行檔）
-- 8:10 Vevila 分享第一次參加 Kaigi on Rails 的心得，Rails 新手一定有共鳴
-- 8:50 開放討論
-感謝 PicCollage 和 5xRuby 贊助場地與餐點。
 -->
 
 ---
@@ -109,7 +271,7 @@ else
 <p class="text-sm mt-4">Runs while it reads → <code>eval</code>, <code>method_missing</code>, <code>define_method</code> work (Rails magic ✨) · but users need <b>Ruby installed</b></p>
 
 <!--
-[0:50–2:00]
+[2:50–4:00]
 先講我們平常怎麼跑 Ruby。你打 ruby app.rb 或 rails s，背後是 CRuby（也叫 MRI）。
 我們用等一下 Spinel 也會用到的同一個例子：double(x) = x * 2。
 
@@ -153,7 +315,7 @@ opt_mult 對應到 CRuby 原始碼裡的 vm_opt_mult：
 <p class="muted text-sm mt-6">github.com/matz/spinel</p>
 
 <!--
-[2:00–2:50]
+[4:00–4:50]
 Spinel 是 Matz 今年 3 月開始寫的 Ruby「AOT 編譯器」。
 AOT = Ahead-of-Time，執行「之前」就先編譯好。
 流程：讀進整個程式 → 推斷每個值的型別 → 產生 C → 交給 C 編譯器 → 得到原生執行檔。
@@ -193,7 +355,7 @@ sp_int sp_double(sp_int lv_x) {
 - This 2-line program → a **153 KB** standalone executable
 
 <!--
-[2:50–3:30]
+[4:50–5:30]
 看個最小例子。左邊是 Ruby，double 方法把 x 乘 2。
 Spinel 分析整個程式後發現：x 永遠只會是 Integer。
 所以右邊產出的 C 裡，x 就是一個普通的 C 整數，乘法就是 C 的整數運算，
@@ -215,7 +377,7 @@ puts 直接變成 printf——沒有 VM、沒有動態方法查找，所以快�
 | Gems | Bundler, any gem | `spin` tool; gem works only if Spinel can compile it |
 
 <!--
-[3:30–4:10]
+[5:30–6:10]
 整理一下差異。
 - 執行：CRuby 要有 Ruby；Spinel 不用，但要在編譯時同一種 OS + CPU 上跑。
 - 發佈：一堆 .rb vs 一個執行檔。
@@ -243,7 +405,7 @@ names.each { |n| define_method(n) { } }   # ❌ refused: non-literal name
 - 🚂 That's why **Rails can't run on Spinel (yet)** — Rails builds methods at runtime
 
 <!--
-[4:10–5:00]
+[6:10–7:00]
 這頁對 Rails 新手特別重要。
 Spinel 會「拒絕」它沒把握的程式碼，在編譯時就報錯，不會產出任何東西。
 - eval 一段執行時才拿到的字串：拒絕。
@@ -329,7 +491,7 @@ typedef struct {
 </div>
 
 <!--
-[5:00–6:15]
+[7:00–8:15]
 剛剛的 double 只收 Integer。如果我再多呼叫一次 double("ab") 呢？
 Ruby 本身沒問題，"ab" * 2 就是 "abab"。Spinel 也編得過，但產出的 C 長得完全不一樣：
 ① 裝箱：x 不能再是單純的 C 整數，而是 sp_RbVal——一個「型別標籤 + 值」的盒子。
@@ -359,7 +521,7 @@ clicks: 5
 <StringCallFlow />
 
 <!--
-[6:15–7:15]（按 → 逐步播放，共 6 個狀態）
+[8:15–9:15]（按 → 逐步播放，共 6 個狀態）
 裝箱的代價有多大？文章做了個實驗：跑 2 億次的迴圈。
 
 先看起點：只有 Integer 的時候，x、double 的回傳值、sum 全部都是 C 的整數 sp_int。
@@ -412,7 +574,7 @@ note: passed `pts[0]` is untyped
 <p class="muted text-xs mt-6">Source: github.com/matz/spinel README & docs/emit-types.md (master 6df0724e, Nov 21 2026)</p>
 
 <!--
-[7:15–8:00]
+[9:15–10:00]
 把上一頁的教訓整理成寫「Spinel 友善 Ruby」的規則：
 1. 每個「位置」都保持一種型別：參數、回傳值、instance variable、區域變數、Array/Hash 的元素。
 2. 同一個 method 的所有呼叫點，傳進來的型別會合併到同一個參數。
@@ -463,7 +625,7 @@ end
 <p class="muted text-xs mt-4">Source: github.com/matz/spinel docs/inline-rbs.md & rbs-extract.md (master 6df0724e, Nov 21 2026)</p>
 
 <!--
-[8:00–8:45]
+[10:00–10:45]
 那 Spinel 有沒有像 CRuby 生態的 RBS 那樣標註型別的方式？有，而且直接用 RBS 語法。
 左邊是 Spinel 文件的例子，用 rbs-inline 的寫法：#: 寫 method 簽名、# @rbs 寫 instance variable、attr_reader 後面也能接型別。
 預設就會讀；對 CRuby 來說這些只是註解，所以同一份程式碼 CRuby 照樣能跑。
@@ -494,7 +656,7 @@ end
 <p class="muted text-sm mt-4">Snapshot Oct 31, 2026 · Spinel 3e867e30 · CRuby 4.0.7 · source: st0012.dev/spinel</p>
 
 <!--
-[8:45–9:15]
+[10:45–11:15]
 速度呢？在 ruby-bench 88 個 benchmark 裡，Spinel 目前能跑 29 個。
 這 29 個的幾何平均：比 CRuby 快 13.9 倍，比開了 YJIT 的 CRuby 快 4.5 倍。
 但要誠實講：這些多是 micro-benchmark，真實應用（像 Rails）還跑不起來，
@@ -517,7 +679,7 @@ end
 <p class="muted text-sm text-center">Each test = a Ruby program whose output must match CRuby</p>
 
 <!--
-[9:15–9:40]
+[11:15–11:40]
 最後一個讓人驚訝的數字：發展速度。
 從 3 月 16 日 Matz 第一個 commit 到 10 月底：
 兩萬兩千多個 commit、合併超過 5,600 個 PR、上百位貢獻者、將近 11,000 個測試程式。
@@ -544,7 +706,7 @@ class: p-0
 </div>
 
 <!--
-[9:40–10:10]
+[11:40–12:10]
 總結四句話：
 1. Spinel 把 Ruby 編成 C 再變成原生執行檔，作者是 Matz。
 2. 很快、不用裝 Ruby，但代價是不能用執行期的動態魔法。
