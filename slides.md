@@ -114,6 +114,7 @@ PicCollage 和 Day1 Coworking Space 提供場地，
 <div class="flex items-end gap-4">
   <img src="/rwc_ruby_prize.jpg" class="h-20 mix-blend-multiply" />
   <span class="text-5xl font-bold red mb-2">2026</span>
+  <img src="/qr_rubyprize.svg" class="w-24 ml-auto" />
 </div>
 
 <p class="text-lg mt-2">Honors <b>individuals</b> with notable recent contributions to the Ruby community · winner gets <span class="mark">¥1,000,000</span> from Matsue City · awarded at RWC</p>
@@ -165,6 +166,7 @@ class: p-0
       Grand prix ×~2 (<b>¥1M</b>) · Special award ×~3 (<b>¥300k</b>)<br>
       <span class="opacity-60 text-xs">19 entries · judging chair: Matz · source: rubybiz.jp</span>
     </p>
+    <img src="/qr_rubybiz.svg" class="absolute right-[4%] bottom-[7.6%] w-24 bg-white p-1 rounded-lg" />
   </div>
 </div>
 
@@ -182,15 +184,31 @@ layout: cover
 class: p-0
 ---
 
-<div class="rt-red-bg flex flex-col items-center justify-center text-center gap-4">
-  <p class="lobster text-3xl opacity-90">Next Ruby Jam</p>
-  <h1 class="!text-white !text-6xl !font-bold !m-0">Dec 17, 2026 (Thu)</h1>
-  <p class="text-2xl opacity-80 mt-4">Topics TBA — stay tuned!</p>
+<div class="rt-red-bg flex items-center justify-center gap-8 px-10">
+  <img src="/rubyjam_1217_dj.jpg" class="h-80 shrink-0 rounded-xl shadow-lg" />
+  <div class="flex-1 text-left">
+    <p class="lobster text-3xl !m-0 !opacity-100">Next Ruby Jam · Dec 17 (Thu) 🎧</p>
+    <h1 class="!text-white !text-5xl !font-bold !mt-2 !mb-3 whitespace-nowrap">Ruby on… Rave!</h1>
+    <p class="text-lg font-bold !m-0 !opacity-100">A live-coding Algorave year-end party<br>with Sonic Pi</p>
+    <div class="text-base mt-5 leading-relaxed opacity-90">
+      <div>Sonic Pi = music in Ruby: <code class="!text-white !bg-white/20">live_loop</code>, <code class="!text-white !bg-white/20">sample</code>, <code class="!text-white !bg-white/20">play</code></div>
+      <div>19:00 intro → demos (EDM · Algorave) → 20:00 Rave!</div>
+      <div>DJ Steven · VJ Tech Support Kasa</div>
+    </div>
+  </div>
+  <div class="text-center shrink-0">
+    <img src="/qr_rubyjam_1217.svg" class="w-44 bg-white p-2 rounded-xl" />
+    <p class="text-xl font-bold mt-3 !mb-0">Register ↑</p>
+  </div>
 </div>
 
 <!--
-[2:20–2:30]
-下一場 Ruby Jam 是 12/17（四），內容還在規劃中，確定後會在社群公布。
+[2:20–2:40]
+下個月 12/17（四）的 Ruby Jam 是年終特別場：Ruby on… Rave!
+Sonic Pi 是用 Ruby 語法寫音樂的開源環境，幾行 live_loop、sample、play 就能即時改程式改音樂。
+Algorave 就是 Algorithmic + Rave：台上現場寫程式，程式碼投影出來，大家一邊看 code 一邊跳舞。
+流程是 19:00 開場、Sonic Pi 介紹，接著示範 EDM 和 Algorave 兩種表演方式，八點開始 Ruby on Rave，DJ 是 Steven，VJ Tech Support 是 Kasa。
+報名連結今晚開放，掃這個 QR code 就可以報名。
 -->
 
 ---
@@ -207,7 +225,7 @@ class: p-0
 </div>
 
 <!--
-[2:30–2:50]
+[2:50–3:10]
 好，回到今晚的主題。
 今晚第一場是 Aotokitsuruya 的 Spinel 深度分享。
 在那之前，我先用 7 分鐘幫大家做個「Spinel 是什麼」的科普，
@@ -271,7 +289,7 @@ else
 <p class="text-sm mt-4">Runs while it reads → <code>eval</code>, <code>method_missing</code>, <code>define_method</code> work (Rails magic ✨) · but users need <b>Ruby installed</b></p>
 
 <!--
-[2:50–4:00]
+[3:10–4:20]
 先講我們平常怎麼跑 Ruby。你打 ruby app.rb 或 rails s，背後是 CRuby（也叫 MRI）。
 我們用等一下 Spinel 也會用到的同一個例子：double(x) = x * 2。
 
@@ -315,7 +333,7 @@ opt_mult 對應到 CRuby 原始碼裡的 vm_opt_mult：
 <p class="muted text-sm mt-6">github.com/matz/spinel</p>
 
 <!--
-[4:00–4:50]
+[4:20–5:10]
 Spinel 是 Matz 今年 3 月開始寫的 Ruby「AOT 編譯器」。
 AOT = Ahead-of-Time，執行「之前」就先編譯好。
 流程：讀進整個程式 → 推斷每個值的型別 → 產生 C → 交給 C 編譯器 → 得到原生執行檔。
@@ -355,7 +373,7 @@ sp_int sp_double(sp_int lv_x) {
 - This 2-line program → a **153 KB** standalone executable
 
 <!--
-[4:50–5:30]
+[5:10–5:50]
 看個最小例子。左邊是 Ruby，double 方法把 x 乘 2。
 Spinel 分析整個程式後發現：x 永遠只會是 Integer。
 所以右邊產出的 C 裡，x 就是一個普通的 C 整數，乘法就是 C 的整數運算，
@@ -377,7 +395,7 @@ puts 直接變成 printf——沒有 VM、沒有動態方法查找，所以快�
 | Gems | Bundler, any gem | `spin` tool; gem works only if Spinel can compile it |
 
 <!--
-[5:30–6:10]
+[5:50–6:30]
 整理一下差異。
 - 執行：CRuby 要有 Ruby；Spinel 不用，但要在編譯時同一種 OS + CPU 上跑。
 - 發佈：一堆 .rb vs 一個執行檔。
@@ -405,7 +423,7 @@ names.each { |n| define_method(n) { } }   # ❌ refused: non-literal name
 - 🚂 That's why **Rails can't run on Spinel (yet)** — Rails builds methods at runtime
 
 <!--
-[6:10–7:00]
+[6:30–7:20]
 這頁對 Rails 新手特別重要。
 Spinel 會「拒絕」它沒把握的程式碼，在編譯時就報錯，不會產出任何東西。
 - eval 一段執行時才拿到的字串：拒絕。
@@ -491,7 +509,7 @@ typedef struct {
 </div>
 
 <!--
-[7:00–8:15]
+[7:20–8:35]
 剛剛的 double 只收 Integer。如果我再多呼叫一次 double("ab") 呢？
 Ruby 本身沒問題，"ab" * 2 就是 "abab"。Spinel 也編得過，但產出的 C 長得完全不一樣：
 ① 裝箱：x 不能再是單純的 C 整數，而是 sp_RbVal——一個「型別標籤 + 值」的盒子。
@@ -521,7 +539,7 @@ clicks: 5
 <StringCallFlow />
 
 <!--
-[8:15–9:15]（按 → 逐步播放，共 6 個狀態）
+[8:35–9:35]（按 → 逐步播放，共 6 個狀態）
 裝箱的代價有多大？文章做了個實驗：跑 2 億次的迴圈。
 
 先看起點：只有 Integer 的時候，x、double 的回傳值、sum 全部都是 C 的整數 sp_int。
@@ -574,7 +592,7 @@ note: passed `pts[0]` is untyped
 <p class="muted text-xs mt-6">Source: github.com/matz/spinel README & docs/emit-types.md (master 6df0724e, Nov 21 2026)</p>
 
 <!--
-[9:15–10:00]
+[9:35–10:20]
 把上一頁的教訓整理成寫「Spinel 友善 Ruby」的規則：
 1. 每個「位置」都保持一種型別：參數、回傳值、instance variable、區域變數、Array/Hash 的元素。
 2. 同一個 method 的所有呼叫點，傳進來的型別會合併到同一個參數。
@@ -625,7 +643,7 @@ end
 <p class="muted text-xs mt-4">Source: github.com/matz/spinel docs/inline-rbs.md & rbs-extract.md (master 6df0724e, Nov 21 2026)</p>
 
 <!--
-[10:00–10:45]
+[10:20–11:05]
 那 Spinel 有沒有像 CRuby 生態的 RBS 那樣標註型別的方式？有，而且直接用 RBS 語法。
 左邊是 Spinel 文件的例子，用 rbs-inline 的寫法：#: 寫 method 簽名、# @rbs 寫 instance variable、attr_reader 後面也能接型別。
 預設就會讀；對 CRuby 來說這些只是註解，所以同一份程式碼 CRuby 照樣能跑。
@@ -656,7 +674,7 @@ end
 <p class="muted text-sm mt-4">Snapshot Oct 31, 2026 · Spinel 3e867e30 · CRuby 4.0.7 · source: st0012.dev/spinel</p>
 
 <!--
-[10:45–11:15]
+[11:05–11:35]
 速度呢？在 ruby-bench 88 個 benchmark 裡，Spinel 目前能跑 29 個。
 這 29 個的幾何平均：比 CRuby 快 13.9 倍，比開了 YJIT 的 CRuby 快 4.5 倍。
 但要誠實講：這些多是 micro-benchmark，真實應用（像 Rails）還跑不起來，
@@ -679,7 +697,7 @@ end
 <p class="muted text-sm text-center">Each test = a Ruby program whose output must match CRuby</p>
 
 <!--
-[11:15–11:40]
+[11:35–12:00]
 最後一個讓人驚訝的數字：發展速度。
 從 3 月 16 日 Matz 第一個 commit 到 10 月底：
 兩萬兩千多個 commit、合併超過 5,600 個 PR、上百位貢獻者、將近 11,000 個測試程式。
@@ -706,7 +724,7 @@ class: p-0
 </div>
 
 <!--
-[11:40–12:10]
+[12:00–12:30]
 總結四句話：
 1. Spinel 把 Ruby 編成 C 再變成原生執行檔，作者是 Matz。
 2. 很快、不用裝 Ruby，但代價是不能用執行期的動態魔法。
